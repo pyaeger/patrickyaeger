@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patrick Yaeger — Sovereign-AI Architect &amp; AI Governance</title>
+<meta name="description" content="Patrick Yaeger — I design sovereign, local-first AI systems and help public institutions and individuals adopt them responsibly. AI governance, integration, and enablement.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2306100b'/%3E%3Crect x='5' y='25.5' width='22' height='2.5' rx='1.25' fill='%2300ff41'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='20' font-weight='800' fill='%2300ff41' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<!-- social preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Patrick Yaeger">
+<meta property="og:title" content="Patrick Yaeger — Sovereign-AI Architect &amp; AI Governance">
+<meta property="og:description" content="I design sovereign, local-first AI systems and help public institutions and individuals adopt them responsibly.">
+<meta property="og:url" content="https://patrickyaeger.com/">
+<meta property="og:image" content="https://patrickyaeger.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Patrick Yaeger — Sovereign-AI Architect and AI Governance.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Patrick Yaeger — Sovereign-AI Architect &amp; AI Governance">
+<meta name="twitter:description" content="Sovereign, local-first AI · governance · enablement.">
+<meta name="twitter:image" content="https://patrickyaeger.com/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#06100b; --panel:#0d1712; --panel-2:#112019; --line:#1d3328;
+    --accent:#00ff41; --accent-soft:#73e6a4; --text:#d6e1d9; --dim:#8aa394; --head:#eef5f0;
+    --c0:#00ff41; --c1:#19f0c0; --c2:#45d8ff; --c3:#6aa6ff; --c4:#b98cff; --c5:#ff77c8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1100px 650px at 82% -12%, rgba(0,255,65,.12), transparent 60%),
+      radial-gradient(900px 620px at 2% 8%, rgba(69,216,255,.10), transparent 55%),
+      radial-gradient(1000px 720px at 95% 60%, rgba(185,140,255,.09), transparent 55%),
+      radial-gradient(1100px 760px at 30% 112%, rgba(255,119,200,.08), transparent 55%),
+      var(--bg);
+    color:var(--text); font-family:"Newsreader", Georgia, serif;
+    font-size:18px; line-height:1.72; -webkit-font-smoothing:antialiased;
+  }
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:repeating-linear-gradient(180deg, rgba(255,255,255,0.012) 0 1px, transparent 1px 3px);mix-blend-mode:overlay;}
+  body::after{content:"";position:fixed;top:0;left:0;right:0;height:4px;z-index:6;
+    background:linear-gradient(90deg,var(--c0),var(--c1),var(--c2),var(--c3),var(--c4),var(--c5));box-shadow:0 0 18px rgba(69,216,255,.4);}
+  .page{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:82px 28px 120px;}
+  @keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+  .reveal{animation:rise .6s cubic-bezier(.2,.7,.2,1) both;}
+
+  .kicker{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;
+    display:inline-flex;align-items:center;gap:.7em;margin-bottom:1.1rem;
+    background:linear-gradient(90deg,var(--c0),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .kicker::before{content:"";width:34px;height:2px;background:linear-gradient(90deg,var(--c0),var(--c2));box-shadow:0 0 12px var(--c2);}
+  h1{font-family:"JetBrains Mono",monospace;font-weight:800;font-size:clamp(2.5rem,7vw,3.8rem);line-height:1.04;letter-spacing:-.02em;margin:.1em 0 .6rem;color:var(--head);
+    background:linear-gradient(105deg,#eef5f0 0%, #9ff0c0 38%, #7fe6ff 66%, #cdb4ff 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .lede{font-size:1.2rem;color:var(--dim);font-style:italic;max-width:62ch;margin:.4rem 0 2rem;}
+  .meta{display:flex;flex-wrap:wrap;gap:0 2.4rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1rem 0;margin-bottom:3rem;
+    font-family:"JetBrains Mono",monospace;font-size:.78rem;letter-spacing:.03em;position:relative;}
+  .meta::after{content:"";position:absolute;left:0;bottom:-1px;width:120px;height:2px;background:linear-gradient(90deg,var(--c0),var(--c3));}
+  .meta div{padding:.25rem 0;}
+  .meta b{color:var(--dim);font-weight:500;display:block;text-transform:uppercase;letter-spacing:.18em;font-size:.64rem;margin-bottom:.2rem;}
+  .meta span{color:var(--head);font-weight:700;}
+  h2{font-family:"JetBrains Mono",monospace;font-weight:800;font-size:1.5rem;letter-spacing:-.01em;color:var(--head);margin:3.2rem 0 1.2rem;padding-left:.9rem;
+    border-left:5px solid transparent;border-image:linear-gradient(180deg,var(--c0),var(--c2),var(--c4)) 1;}
+  strong{color:var(--head);font-weight:700;} em{color:#e7efe9;}
+
+  /* focus grid */
+  .focus{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem;margin:1.2rem 0;}
+  @media(max-width:640px){.focus{grid-template-columns:1fr;}}
+  .fcard{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--c,var(--accent));border-radius:12px;padding:1.3rem 1.45rem;
+    transition:transform .18s,box-shadow .18s,border-color .18s;}
+  .fcard:hover{transform:translateY(-3px);box-shadow:0 20px 44px -30px #000, 0 -5px 26px -20px var(--c,var(--accent));}
+  .fcard h3{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:1rem;color:var(--head);margin:0 0 .5rem;}
+  .fcard p{margin:0;font-size:.98rem;color:var(--text);}
+
+  /* project feature */
+  .project{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:1.9rem 2rem;position:relative;overflow:hidden;margin:1.2rem 0;}
+  .project::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--c0),var(--c2),var(--c4),var(--c5));}
+  .project .dom{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:.5rem;}
+  .project h3{font-family:"JetBrains Mono",monospace;font-weight:800;font-size:1.5rem;margin:0 0 .7rem;
+    background:linear-gradient(100deg,#9ff0c0,#7fe6ff,#cdb4ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .project p{margin:.5rem 0;}
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-family:"JetBrains Mono",monospace;font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--bg);background:var(--accent);border:none;border-radius:8px;padding:.7em 1.25em;text-decoration:none;margin-top:1.1rem;transition:.15s;box-shadow:0 0 20px -6px var(--accent);}
+  .btn:hover{filter:brightness(1.12);box-shadow:0 0 28px -4px var(--accent);}
+
+  /* connect */
+  .connect{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.2rem 0;}
+  .connect a{font-family:"JetBrains Mono",monospace;font-size:.85rem;color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:10px;padding:.7em 1.1em;
+    display:inline-flex;flex-direction:column;gap:.15em;transition:.15s;}
+  .connect a:hover{border-color:var(--accent);color:var(--accent);box-shadow:0 0 16px -6px var(--accent);transform:translateY(-2px);}
+  .connect a b{color:var(--dim);font-weight:500;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;}
+
+  footer{margin-top:3.6rem;padding-top:1.4rem;border-top:1px solid var(--line);font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--dim);
+    letter-spacing:.04em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;}
+  footer span:nth-child(1){color:var(--c0);} footer span:nth-child(2){color:var(--c2);} footer span:nth-child(3){color:var(--c4);}
+
+  .themebtn{position:fixed;top:14px;right:18px;z-index:10;font-family:"JetBrains Mono",monospace;font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    background:var(--panel);color:var(--dim);border:1px solid var(--line);border-radius:8px;padding:.5em .9em;cursor:pointer;transition:.15s;}
+  .themebtn:hover{color:var(--accent);border-color:var(--accent);box-shadow:0 0 14px -4px var(--accent);}
+  body.light{--bg:#f4f7f5;--panel:#ffffff;--panel-2:#eef3f0;--line:#d3e0d8;--accent:#0a7d2e;--accent-soft:#0a7d2e;--text:#16201a;--dim:#4a5a50;--head:#0a3d22;background:#f4f7f5;}
+  body.light::before{display:none;}
+  body.light h1,body.light .project h3{background:none;-webkit-text-fill-color:#0a3d22;color:#0a3d22;}
+  body.light .kicker{background:none;-webkit-text-fill-color:#0a7d2e;color:#0a7d2e;}
+  body.light .btn{color:#fff;}
+</style>
+</head>
+<body>
+<button class="themebtn" onclick="document.body.classList.toggle('light')">◐ Theme</button>
+<div class="page">
+
+  <header>
+    <span class="kicker reveal">Sovereign-AI Architect · AI Governance</span>
+    <h1 class="reveal" style="animation-delay:.06s">Patrick Yaeger</h1>
+    <p class="lede reveal" style="animation-delay:.12s">I design sovereign, local-first AI systems — and help public institutions and individuals adopt them responsibly, where governance, integration, and making powerful tools <em>legible</em> are what actually decide success.</p>
+    <div class="meta reveal" style="animation-delay:.18s">
+      <div><b>Focus</b><span>Sovereign &amp; local-first AI</span></div>
+      <div><b>Governance</b><span>Responsible AI, public sector</span></div>
+      <div><b>Craft</b><span>Low-code integration · PPM</span></div>
+      <div><b>Based</b><span>Louisville, Kentucky</span></div>
+    </div>
+  </header>
+
+  <section class="reveal" style="animation-delay:.24s">
+    <h2>What I do</h2>
+    <div class="focus">
+      <div class="fcard" style="--c:var(--c0)">
+        <h3>AI Governance</h3>
+        <p>Responsible-use frameworks, policy, and human-in-the-loop controls for organizations putting AI to work — with public-sector realities (records, accessibility, procurement, public trust) built in from the start.</p>
+      </div>
+      <div class="fcard" style="--c:var(--c2)">
+        <h3>Sovereign &amp; Local-First AI</h3>
+        <p>Private, on-prem AI you own end to end: local models, retrieval over your own knowledge, and a zero-trust architecture — capability without your data ever leaving your control.</p>
+      </div>
+      <div class="fcard" style="--c:var(--c3)">
+        <h3>Public-Sector Modernization</h3>
+        <p>Turning messy institutional workflows into working systems — low-code integration and portfolio/project management at city-government scale, including large capital-program portfolios.</p>
+      </div>
+      <div class="fcard" style="--c:var(--c4)">
+        <h3>Enablement &amp; Translation</h3>
+        <p>A background in the arts, teaching, and libraries — I make complex AI legible and usable for the people who actually have to live with it, not just the ones who build it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Priority project</h2>
+    <div class="project reveal">
+      <span class="dom">myfrontierai.com</span>
+      <h3>MyFrontierAI</h3>
+      <p>My flagship — a personal AI <em>operating system</em> for discovering the vast, undiscovered country of your own <strong>latent knowledge and latent capability</strong>, and a practice for helping ambitious people build their own. Sovereign by design: your second brain, your models, your data, on your hardware.</p>
+      <p>If you want to build your own — a private second brain, a panel-of-experts model setup, a personal AI assistant that is genuinely <em>yours</em> — that is what I help with.</p>
+      <a class="btn" href="https://myfrontierai.com">Visit MyFrontierAI →</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Connect</h2>
+    <div class="connect">
+      <a href="https://www.linkedin.com/in/patrickyaeger"><b>LinkedIn</b>in/patrickyaeger</a>
+      <a href="https://github.com/pyaeger"><b>GitHub</b>pyaeger</a>
+      <a href="mailto:patrick@patrickyaeger.com"><b>Email</b>patrick@patrickyaeger.com</a>
+      <a href="https://myfrontierai.com"><b>Project</b>MyFrontierAI.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>PATRICK YAEGER</span>
+    <span>patrickyaeger.com</span>
+    <span>v1 · 2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
