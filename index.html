@@ -83,8 +83,10 @@
   .project h3{font-family:"JetBrains Mono",monospace;font-weight:800;font-size:1.5rem;margin:0 0 .7rem;
     background:linear-gradient(100deg,#9ff0c0,#7fe6ff,#cdb4ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
   .project p{margin:.5rem 0;}
+  .actions{display:flex;flex-wrap:wrap;gap:.8rem;}
   .btn{display:inline-flex;align-items:center;gap:.5em;font-family:"JetBrains Mono",monospace;font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;
     color:var(--bg);background:var(--accent);border:none;border-radius:8px;padding:.7em 1.25em;text-decoration:none;margin-top:1.1rem;transition:.15s;box-shadow:0 0 20px -6px var(--accent);}
+  .btn.secondary{color:var(--text);background:transparent;border:1px solid var(--line);box-shadow:none;}
   .btn:hover{filter:brightness(1.12);box-shadow:0 0 28px -4px var(--accent);}
 
   /* connect */
@@ -107,6 +109,7 @@
   body.light h1,body.light .project h3{background:none;-webkit-text-fill-color:#0a3d22;color:#0a3d22;}
   body.light .kicker{background:none;-webkit-text-fill-color:#0a7d2e;color:#0a7d2e;}
   body.light .btn{color:#fff;}
+  body.light .btn.secondary{color:var(--text);}
 </style>
 </head>
 <body>
@@ -154,7 +157,11 @@
       <h3>MyFrontierAI</h3>
       <p>My flagship — a personal AI <em>operating system</em> for discovering the vast, undiscovered country of your own <strong>latent knowledge and latent capability</strong>, and a practice for helping ambitious people build their own. Sovereign by design: your second brain, your models, your data, on your hardware.</p>
       <p>If you want to build your own — a private second brain, a panel-of-experts model setup, a personal AI assistant that is genuinely <em>yours</em> — that is what I help with.</p>
-      <a class="btn" href="https://myfrontierai.com">Visit MyFrontierAI →</a>
+      <p><strong>Frontier is governed by The Frontier Constitution,</strong> a public-draft charter for sovereign, human-directed personal AI.</p>
+      <div class="actions">
+        <a class="btn" href="https://myfrontierai.com">Visit MyFrontierAI →</a>
+        <a class="btn secondary" href="https://myfrontierai.com/constitution.html">Read the Constitution →</a>
+      </div>
     </div>
   </section>
 
