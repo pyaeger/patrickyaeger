@@ -9,11 +9,11 @@ Source repository for **patrickyaeger.com**, Patrick Yaeger’s professional hom
 
 ## Professional focus
 
-Patrick is a Senior Applications Analyst working in public-sector technology, with a focus on translating operational needs into usable, governable systems.
+Patrick is a Senior Applications Analyst and the primary lead for Louisville Metro's citywide Smartsheet Control Center and PPM environment, working through Insight Global. His public-sector solution architecture connects operational needs with approvals, exception handling, audit trails, accessibility and user enablement.
 
 Areas of practice and ongoing professional development include:
 
-- government technology modernization
+- citywide Smartsheet Control Center leadership and public-sector modernization
 - low-code solution architecture and workflow automation
 - project and portfolio management systems
 - requirements discovery, documentation, training, and enablement
