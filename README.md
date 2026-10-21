@@ -32,6 +32,8 @@ Frontier is governed by **The Frontier Constitution**, a public charter centered
 - Constitution: https://myfrontierai.com/constitution.html
 - Repository: https://github.com/pyaeger/myfrontierai
 
+The Constitution's CC BY-SA 4.0 license applies to its text. Frontier website code, stories, artwork and branding have separate reuse terms; see [Frontier licensing and reuse](https://github.com/pyaeger/myfrontierai/blob/main/LICENSE).
+
 ## Boundary between professional and independent work
 
 This repository and the projects presented at patrickyaeger.com represent Patrick Yaeger’s personal work and views. They are not policies, systems, endorsements, or positions of any employer, client, customer, or affiliated organization. No nonpublic organizational data, systems, confidential information, or work product are incorporated here.
